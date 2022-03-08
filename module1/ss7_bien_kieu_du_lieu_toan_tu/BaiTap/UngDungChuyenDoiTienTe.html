@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <table>
+        <tr><th>Amount</th>
+            <th>From currency</th>
+            <th>To currency </th>
+            <th></th>
+        </tr>
+
+        <tr><td><input type="text"name=" = Amount" id="number"></td>
+
+        <td><select>
+            <option value="vietnam">vietnam</option>
+        </select></td>
+        <td>
+            <select>
+                <option value="USD">USD</option>
+            </select></td>
+           <td><button type="submit" onclick="tranfer()">convert</button></td>
+        </tr>
+    </table>
+    Result <input type="text" id="kq">
+
+<script>
+    function tranfer() {
+        let Amount=parseInt(document.getElementById('number').value);
+        let kq= Amount/23000;
+        document.getElementById('kq').value = kq;
+    }
+
+</script>
+</body>
+</html>
