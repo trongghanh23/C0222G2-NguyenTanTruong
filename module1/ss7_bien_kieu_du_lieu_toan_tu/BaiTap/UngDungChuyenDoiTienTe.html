@@ -16,11 +16,13 @@
         <tr><td><input type="text"name=" = Amount" id="number"></td>
 
         <td><select>
-            <option value="vietnam">vietnam</option>
+            <option value="vietnam">vietnam
+
         </select></td>
         <td>
             <select>
                 <option value="USD">USD</option>
+                <option value="yen">yen</option>
             </select></td>
            <td><button type="submit" onclick="tranfer()">convert</button></td>
         </tr>
@@ -32,6 +34,9 @@
         let Amount=parseInt(document.getElementById('number').value);
         let kq= Amount/23000;
         document.getElementById('kq').value = kq;
+
+
+
     }
 
 </script>
