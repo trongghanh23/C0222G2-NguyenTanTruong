@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From currency</th>
+        <th>To currency</th>
+        <th></th>
+    </tr>
+
+    <tr>
+        <td><input id="From" type="text" name=" = aMount"></td>
+
+        <td><select id="viet">
+            <option value="vnd">vnd</option>
+            <option value="usd">usd</option>
+
+        </select></td>
+        <td>
+            <select id="usd">
+                <option value="USD">usd</option>
+                <option value="vn">vnd</option>
+            </select></td>
+        <td>
+            <button type="button" onclick="tranfer()">conver</button>
+        </td>
+    </tr>
+</table>
+Result <input type="text" id="kq">
+
+<script>
+    function tranfer() {
+        let aMount = parseInt(document.getElementById.innerHTML('From').value)
+        let viet = parseInt(document.getElementById.innerHTML('viet').value)
+        let usd = parseInt(document.getElementById.innerHTML('usd').value)
+        if (aMount == viet && viet == usd) {
+            document.getElementById('kq').innerText = aMount * 23000
+        } else if (viet == usd && usd == viet) {
+            document.getElementById('Result').innerText = aMount / 23000;
+        } else {
+            document.getElementById('result').innerText = aMount;
+        }
+
+
+
+    }
+
+</script>
+</body>
+</html>
