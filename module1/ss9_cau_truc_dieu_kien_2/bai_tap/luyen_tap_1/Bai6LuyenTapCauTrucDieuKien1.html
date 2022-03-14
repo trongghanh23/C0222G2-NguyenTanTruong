@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ds = parseInt(prompt("nhập danh số bán hàng"))
+    if (ds>50000&ds < 100000) {
+        alert('hoa hồng nhận được la' + ds * 2/100)
+    } else if (ds > 100000 & ds < 500000) {
+        alert('hoa hồng nhận được là' + 2/100  +(500000 - 100000) * 5/100)
+    } else if (ds > 500000) {
+        alert('hoa hồng nhận được là' + 2/100  +(500000 - 100000) * 5/100  +(ds - 500000) * 7/100 )
+    } else {
+        alert('không nhận được hoa hồng')
+
+    }
+
+</script>
+</body>
+</html>
