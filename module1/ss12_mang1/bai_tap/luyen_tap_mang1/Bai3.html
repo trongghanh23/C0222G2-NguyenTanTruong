@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tb=0
+    let max = 0;
+    let number = [3, 2, 1, 4, 5, 14, 7, 8, 9, 10]
+    for (let i = 0; i < number.length; i++) {
+        if (max < number[i]) {
+
+            max = number[i]
+        }
+        tb+=number[i]
+    }
+    document.write('số lớn nhất là' + max + "giá trị trung bình của các phần tử là" + tb/number.length)
+
+</script>
+</body>
+</html>
