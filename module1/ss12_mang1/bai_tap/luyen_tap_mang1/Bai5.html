@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dem = 0
+
+    let str = "21-3r-r45-3-4"
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] == "-" && !isNaN(str[i + 1])) {
+            dem = dem + 1
+        }
+    }
+    document.write('số nguyên âm là' + dem)
+
+</script>
+
+</body>
+</html>
