@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form method="post" action="">
+    <h1>google từ điển</h1>
+    <input type="text" id="ketQua">
+    <button type="button" onclick="search()">ketqua</button>
+    <label>kết quả tìm kiếm</label> <input type="text" id="a">
+    <script>
+        let tiengViet = ["màu đỏ", "cây", "xe máy"];
+        let tiengAnh = ["read", "tree", "motobike"];
+        let check = false;
+
+        function search() {
+
+            let ketQua = document.getElementById('ketQua').value
+            let a = document.getElementById('a').value
+            for (let i = 0; i < tiengViet.length; i++) {
+                for (let j = 0; j < tiengAnh.length; j++) {
+                    if (tiengViet[i] === ketQua) {
+                        document.getElementById('a').value = tiengAnh[i];
+                        check = true;
+                        break;
+                    }
+                }
+
+
+            }
+            if (check == false) {
+                document.getElementById('a').value = 'không tìm thấy'
+
+
+            }
+        }
+
+
+        // document.write( tiengViet[i]);
+        // document.write( tiengAnh[i]);
+
+
+    </script>
+
+
+</form>
+</body>
+</html>
