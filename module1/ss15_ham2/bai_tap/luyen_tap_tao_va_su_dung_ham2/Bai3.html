@@ -6,16 +6,20 @@
 </head>
 <body>
 <script>
-    let b = num(parseInt(prompt('nhập số nguyên')))
+    let num = daythua(prompt("nhập số n"))
 
-    function num(a) {
-        for (i = 1; i = a; i++) {
-
-
+    function daythua(n) {
+        let daythua = 1;
+        for (let i = 1; i <= n; i++) {
+            daythua *= i
         }
+        document.write("giay thừa của " +n+ "là" + daythua)
 
     }
 
+
 </script>
+
+
 </body>
 </html>
