@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(chieudai, chierong) {
+            this.chieudai = chieudai
+            this.chieurong = chierong
+        }
+       getDientich(){
+            return this.chieudai*this.chieurong
+       }
+       getChuvi(){
+            return (this.chieudai+this.chieurong)*2
+       }
+setChieudai(chieudaimoi){
+            this.chieudai=chieudaimoi
+}
+setChieurong(chieurongmoi){
+            this.chieurong=chieurongmoi
+}
+    }
+
+    let hcn = new Rectangle(7, 4)
+    document.write(hcn.getDientich())
+
+    document.write("<br>")
+    document.write(hcn.getChuvi())
+    document.write("<br>")
+    hcn.setChieudai(8)
+    hcn.setChieurong(10)
+    document.write(hcn.getDientich())
+    document.write("<br>")
+    document.write(hcn.getChuvi())
+    document.write("<br>")
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function timKiTuTrongMang(array, kiTu) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (kiTu == array[i]) {
+                count++;
+            }
+        }
+        if (count == 0) {
+            return -1;
+        } else {
+            return count;
+        }
+    }
+    let array=[1,2,3,4,3,4,5,5,5]
+   let c= timKiTuTrongMang(array,0)
+    alert(c)
+
+
+</script>
+</body>
+</html>

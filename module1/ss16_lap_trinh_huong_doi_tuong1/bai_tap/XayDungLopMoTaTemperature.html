@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(nhietDo) {
+            this.nhietDo=nhietDo
+        }
+        getCsangf(){
+            return (this.nhietDo*9/5)+32;
+        }
+        getCsangk(){
+            return (this.nhietDo+273,15);
+        }
+    }
+    let doC=new Temperature(25)
+    document.write("25 độ c sang độ f là "+doC.getCsangf())
+    document.write('<br>')
+    document.write("25 độ c sang độ k là"+doC.getCsangk())
+    document.write("<br>")
+
+</script>
+</body>
+</html>

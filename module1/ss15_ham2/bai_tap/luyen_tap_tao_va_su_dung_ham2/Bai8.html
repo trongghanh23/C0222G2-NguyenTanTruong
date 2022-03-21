@@ -6,22 +6,22 @@
 </head>
 <body>
 <script>
-    let num = number()
-    document.write(array)
-    function number(a, b) {
-        let c = 0
-        array = [1, 2, 3, 4,]
+    let num= [1, 2, 3, 4, 5]
+    mang(num);
+    function mang(num) {
         a = 0
-        b = array.length - 1
+        b = num.length - 1
         while (a < b) {
-            array[a] = array[b]
-            array[b] = c
+            let i=num[a]
+            num[a] = num[b]
+            num[b] = i
             a++
             b--
-
         }
-
     }
+    document.write(num)
+
+
 </script>
 </body>
 </html>

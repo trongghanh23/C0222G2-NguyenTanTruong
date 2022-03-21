@@ -6,14 +6,46 @@
 </head>
 <body>
 <script>
-    class Date {
-        constructor(day, month, year) {
-            this.day = day;
-            this.month = month;
-            this.year = year;
+    class Date{
+        constructor(day,month,year) {
+            this.day=day
+            this.month=month
+            this.year=year
+        }
+        getDay(){//get trả về giá trị có return,khi gọi hàm ko gọi trực tiếp đến thuộc tính dc dùng phương thức để gọi
+            return this.day
+        }
+        getMonth(){
+            return this.month
+        }
+        getYear(){
+            return this.year
+        }
+        setDay(ngayMoi){//thay đổi giá trị
+            this.day=ngayMoi
+        }
+        setMonth(thangMoi){
+            this.month=thangMoi
+        }
+        setYear(namMoi){
+            this.year=namMoi
+        }
+        setDate(day,month,year){
+        this.day,this.month,this.year=day,month,year
+        }
+        toString(){
+            return this.day+"/"+this.month+"/"+this.year
         }
 
     }
+    let ngay1=new Date(2,3,2022)
+    document.write(ngay1.toString())
+    // ngay1.setMonth(10);
+    // alert(ngay1.toString())
+    document.write("<br>")
+    ngay1.setMonth(4)
+    document.write(ngay1.toString())
+
 </script>
 </body>
 </html>
