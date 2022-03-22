@@ -6,64 +6,71 @@
 </head>
 <body>
 <script>
-    class Battery{
+    class Battery {
         constructor(energy) {
-      this.energy=energy  }
-      getEnergy(){
-          return this.energy
-      }
-      setEnergy(energy)
-      {
-          this.energy=energy
-      }
-      setDecreaseEnergy(energy)
-      {
-          if(this.energy>0){
-              this.energy--
-          }
-      }
-    }
-    class FlashLamp{
-        constructor(battery) {
-            this.battery=battery;
+            this.energy = energy
         }
-        getBatteryInfo(){
+
+        getEnergy() {
+            return this.energy
+        }
+
+        setEnergy(energy) {
+            this.energy = energy
+        }
+
+        setDecreaseEnergy(energy) {
+            if (this.energy > 0) {
+                this.energy--
+            }
+        }
+    }
+    class FlashLamp {
+        constructor(battery) {
+            this.battery = battery;
+        }
+
+        getBatteryInfo() {
             return this.battery.getEnergy()
         }
-        setBattery(battery){
-            this.battery=battery
+
+        setBattery(battery) {
+            this.battery = battery
         }
-        setLinght(){
-            if(this.status){
+
+        checkLinght() {
+            if (this.status) {
                 alert("Lighting");
             } else {
                 alert("Not lighting");
             }
 
         }
-        setTurnon(){
+
+        turnOn() {
             this.status = true
         }
-        setTurnoff()
-        {
-            this.status =false
+
+        turnOff() {
+            this.status = false
         }
     }
-    let battery=new Battery()
+
+    let battery = new Battery()
     battery.setEnergy(10)
-    let flashLamp= new FlashLamp()
+    let flashLamp = new FlashLamp()
     flashLamp.setBattery(battery)
     document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
-    flashLamp.setLinght();
+    flashLamp.checkLinght();
 
     document.write("Turn on<br/>")
-    flashLamp.setTurnon();
-    flashLamp.setLinght();
+    flashLamp.turnOn();
+    flashLamp.checkLinght();
     document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
 
     document.write("Turn off<br/>")
-    flashLamp.setTurnoff();
-    flashLamp.setLinght();
+    flashLamp.turnOff();
+    flashLamp.checkLinght();
 </script>
 </body>
 </html>

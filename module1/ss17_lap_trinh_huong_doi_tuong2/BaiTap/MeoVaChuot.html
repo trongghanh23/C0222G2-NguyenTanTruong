@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class Animal{
+        constructor(ten,khoiLuong,tocDo) {
+            this.name = ten;
+            this.weight=khoiLuong;
+            this.speed = tocDo;
+        }
+        say(text){
+            console.log("keu: " + text); // chư xác định kêu như thế nào
+        }
+    }
+    class Rat extends Animal{
+        constructor(ten,khoiLuong,tocDo,trangThai) {
+            super(ten,khoiLuong,tocDo);
+            this.status = trangThai;
+        }
+        say(text) {
+            console.log("chít chit : " + text);
+        }
+    }
+    class Cat extends Animal{
+        constructor(ten,khoiLuong,tocDo) {
+            super(ten,khoiLuong,tocDo);
+        }
+        say(text) {
+            console.log("meo meo : " + text);
+        }
+        eatMouse(mouse){
+            if (mouse.status=="song"){
+                this.weight +=mouse.weight;
+            }else {
+                this.say("Chết rôi không ăn")
+            }
+        }
+        catchMouse(mouse){
+            if (this.speed >mouse.speed){
+                this.say(" Bắt được rồi"); // mèo nói
+                // bắt xong rồi ăn
+                this.eatMouse(mouse);
+            }else {
+                mouse.say(" Đố bắt được"); // chuột nói
+            }
+        }
+    }
+
+    let jerry1 = new Rat("Jerry1",2,5,"song");
+    let jerry2 = new Rat("Jerry2",2,2,"song");
+    let jerry3 = new Rat("Jerry3",2,0,"chet");
+    let jerry4 = new Rat("Jerry4",2,15,"song");
+    let jerrys = [jerry1,jerry2,jerry3,jerry4];
+
+    let tom = new Cat("Tom",10,12)
+
+    for (let jerry of jerrys) {
+        tom.catchMouse(jerry);
+    }
+
+    console.log("khối lượng của mèo "+ tom.weight);// khối lượng mèo là 16kg
+
+</script>
+</body>
+</html>
