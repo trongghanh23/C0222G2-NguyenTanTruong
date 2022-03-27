@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n
+    let gia=0
+    let soLuong=0
+    while (n!==7){
+        n=Number(prompt("menu đồ uống:\n 1.cafe\n 2.cam vắt\n 3.nước ép cà rốt\n 4.nước ép cà chua\n 5.nước dừa \n 6.nước lọc \n 7.thoát gọi món"))
+        switch (n) {
+            case 1:
+                gia=10000
+               soLuong= Number(prompt("nhập số lương"))
+                alert("giá tiền của" +soLuong+"ly cafe là"+(gia*soLuong))
+                break;
+                case 2:
+                    gia=15000
+                soLuong=Number(prompt("nhập số lượng"))
+                alert("giá tiền của "+soLuong+ "ly cam vắt "+(gia*soLuong))
+                break;
+                    case 3:
+                    gia=20000
+                soLuong=Number(prompt("nhập số lượng"))
+                alert("giá tiền của "+soLuong+ "nước ép cà rốt "+(gia*soLuong))
+                break;
+                    case 4:
+                    gia=15000
+                soLuong=Number(prompt("nhập số lượng"))
+                alert("giá tiền của "+soLuong+ "nước ép cà chua "+(gia*soLuong))
+                break;
+                    case 5:
+                    gia=15000
+                soLuong=Number(prompt("nhập số lượng"))
+                alert("giá tiền của "+soLuong+ "nước dừa"+(gia*soLuong))
+                break;
+                    case 6:
+                    gia=5000
+                soLuong=Number(prompt("nhập số lượng"))
+                alert("giá tiền của "+soLuong+ "nước lọc "+(gia*soLuong))
+                break;
+                    case 7:
+                        alert("cảm ơn quý khách")
+                break;
+
+
+        }
+
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    let str = "tRuong          TaN      HAI "
+    let r = chuanHai(str);
+    alert(r)
+    function chuanHai(str) {
+        let array2 = []
+        str = str.toLowerCase();
+        let array = str.split(" ")
+        // alert(array)
+        for (let i = 0; i < array.length; i++)
+            if (array[i] !== "") {
+                array2.push(array[i])
+            }
+        for (let j = 0; j < array2.length; j++) {
+            array2[j] = array2[j][0].toUpperCase() + array2[j].substring(1)
+        }
+        return array2.join(" ");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập n"));
+    let m = parseInt(prompt("nhập m"));
+    let a = new Array(n);
+    for (let i = 0; i < n; i++) {
+        a[i] = new Array(m);
+    }
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < a[i].length; j++) {
+            a[i][j] = parseInt(Math.random() * 100 + 1);
+        }
+    }
+    console.log(a);
+
+    function getTotal(array) {
+        let total = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (a[i][j] % 2 === 0) {
+                    total += a[i][j];
+                }
+            }
+        }
+        return total;
+    }
+
+    console.log("Total: " + getTotal(a));
+</script>
+</body>
+</html>

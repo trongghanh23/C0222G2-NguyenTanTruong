@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    width=5
+    let k = width - 1;
+    for (let i = 0; i < width - 1; i++) {
+
+        for (let j = 0; j < 2 * width - 1; j++) {
+            if (j === k - i || j === k + i) {
+                document.write(" * ");
+            } else {
+                document.write("&nbsp ");
+            }
+        }
+        document.write("<br>");
+    }
+    for (let j = 0; j < 2* width - 3 ; j++) {
+        document.write(" * ");
+    }
+
+</script>
+</body>
+</html>
